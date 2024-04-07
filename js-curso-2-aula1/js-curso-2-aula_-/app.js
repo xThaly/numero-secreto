@@ -1,5 +1,5 @@
 let listaDeNumerosSorteados = [];
-let numeroLimite = 10;
+let numeroLimite = 100;
 let tentativas = 1;
 let numeroSecreto;
 
@@ -27,7 +27,7 @@ function verificarChute(){
     if(chute == numeroSecreto){
         exibirTexto('h1','Acertou!');
         let palavraTentativa = tentativas > 1 ? 'tentativas': 'tentativa';
-        let mensagemTentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativa} `;
+        let mensagemTentativas = `Você achou o número secreto com ${tentativas} ${palavraTentativa} `;
         exibirTexto('p',mensagemTentativas);
         document.getElementById('reiniciar').removeAttribute('disabled');
     }else{
@@ -42,7 +42,7 @@ function verificarChute(){
 }
 function mensagemInicial(){
     exibirTexto('h1','Jogo do número Secreto');
-    exibirTexto('p','Escolha um número entre 1 e 10');
+    exibirTexto('p','Escolha um número entre 1 e 100');
 }
 
 function novoJogo(){
